@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio src="" id="audio"></audio>
+
+
     <div class="music-player">
         <h1 class="music-name">Lay me down</h1>
         <p class="artist-name">Adele</p>
@@ -22,13 +25,18 @@
         </div>
 
         <div class="controls">
-            <button class="play-btn">
+            <button class="btn backward-btn"><img src="/svg/previous.svg" alt=""></button>
+            
+            <button class="play-btn pause">
                 <span></span>
                 <span></span>
             </button>
+
+            <button class="btn forward-btn"><img src="/svg/next.svg" alt=""></button>
         </div>
     </div>
     
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
