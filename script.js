@@ -51,7 +51,7 @@ const formatTime = (time) => {
     if(sec < 10){
         sec = `0${sec}`;
     }
-    return `${min} : ${min}`;
+    return `${min} : ${sec}`;
 }
 
 
