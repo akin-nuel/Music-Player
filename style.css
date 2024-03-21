@@ -15,15 +15,42 @@ body{
 }
 
 .music-player{
+    position: relative;
     width: 350px;
-    height: 550px;
+    height: auto;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
     padding: 30px;
     margin-top: 20px;
     overflow: hidden;
+    border: 2px solid transparent;
     color: #d5eebb;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Light color for the border */
+    animation: lightAnimation 2s infinite alternate; /* Animation properties */
+}
+
+
+
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    object-fit: cover;
+    height: 100%;
+    width:100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    height: 100%;
+    width:100%;
+    opacity: 0.6;
 }
 
 .music-name, 
@@ -188,6 +215,20 @@ body{
         transform: rotate(360deg);
     }
 }
+
+@keyframes lightAnimation {
+    0% {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.8); /* Change the border color to a brighter shade */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a glowing effect */
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
 
 /* .controls {
     width: 100%;
